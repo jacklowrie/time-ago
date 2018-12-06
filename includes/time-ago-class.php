@@ -32,7 +32,6 @@ class Time_Ago {
     switch ($choice) {
 
       case 'default':
-        // subtract the current post date from the current time
         $date_string = $this->time_ago_default_format( $post_id );
         break;
 
@@ -63,10 +62,12 @@ class Time_Ago {
 
     // make the string prettier
     $date_string = $this->time_ago_prettify( $date_string );
+
     return $date_string;
   }
 
   public function time_ago_default_format( $post_id ) {
+    // subtract the current post date from the current time
     $datestring = human_time_diff( get_the_time( 'U', $post_id ), current_time('timestamp') );
     return $datestring;
   }
@@ -77,4 +78,4 @@ class Time_Ago {
     // makes 'minute' a full word. min -> minute, mins -> minutes
     return str_replace( 'min', 'minute', $datestring );
   }
-} // end of class
+}
