@@ -24,8 +24,9 @@ class Time_Ago {
     }
 
     // get the format setting (user's choice)
-    $choice = 'no_minutes';
-
+    $choice = 'default';
+    $options = get_option( 'time_ago_options', $this->settings->time_ago_default_settings() );
+    $choice = $options['time_ago_display_type'];
 
     $date_string = '';
     switch ($choice) {
