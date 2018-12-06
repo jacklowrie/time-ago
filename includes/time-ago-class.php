@@ -28,19 +28,19 @@ class Time_Ago {
     $options = get_option( 'time_ago_options', $this->settings->time_ago_default_settings() );
     $choice = $options['time_ago_display_type'];
 
-    $date_string = '';
+    $date_string = $this->time_ago_default_format( $post_id );
+
     switch ($choice) {
 
       case 'default':
-        $date_string = $this->time_ago_default_format( $post_id );
         break;
 
       case 'no_minutes':
-        $date_string = 'no_mins ';
+        $date_string = $this->time_ago_no_mins_format( $date_string );
         break;
 
       case 'no_hours':
-        $date_string = 'no_hours ';
+
         break;
 
       case 'no_days':
@@ -60,15 +60,20 @@ class Time_Ago {
         break;
     }
 
-    // make the string prettier
-    $date_string = $this->time_ago_prettify( $date_string );
-
+    $date_string = $this->time_ago_prettify( $date_string ); // make the string prettier
     return $date_string;
   }
 
   public function time_ago_default_format( $post_id ) {
     // subtract the current post date from the current time
     $datestring = human_time_diff( get_the_time( 'U', $post_id ), current_time('timestamp') );
+    return $datestring;
+  }
+
+  public function time_ago_no_mins_format( $datestring ) {
+    if ( strpos( $datestring, 'min' ) !== false ) {
+      $datestring = "less than an hour";
+    }
     return $datestring;
   }
 
