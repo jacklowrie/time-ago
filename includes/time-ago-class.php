@@ -1,4 +1,4 @@
-<?php
+<?php // time ago class
 
 
 if ( !defined('ABSPATH') ) exit;
@@ -8,6 +8,7 @@ class Time_Ago {
   public $settings;
 
   public function __construct() {
+    $this->settings = new Time_Ago_Settings(); // add settings
     // add 'format date' action
     add_action( 'get_the_date', array ($this, 'time_ago_format_date'), 10, 3 );
   }

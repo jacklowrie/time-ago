@@ -31,4 +31,3 @@ require_once plugin_dir_path(__FILE__) . 'includes/time-ago-class.php';
 
 
 $Time_Ago = new Time_Ago(); // run it!
-$Time_Ago->settings = new Time_Ago_Settings(); // add settings
