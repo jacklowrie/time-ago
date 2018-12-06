@@ -24,9 +24,15 @@ class Time_Ago {
     }
     // subtract the current post date from the current time
     $date_string = human_time_diff( get_the_time( 'U', $post_id ) , current_time('timestamp') ) . ' ago';
+
     // make the string prettier
-    $date_string = str_replace('min', 'minute', $date_string);
+    $date_string = $this->time_ago_prettify($date_string);
 
     return $date_string;
   } // end of time_ago_date_format
+
+  public function time_ago_prettify($datestring) {
+    // makes 'minute' a full word. min -> minute, mins -> minutes
+    return str_replace('min', 'minute', $datestring);
+  }
 } // end of class
