@@ -22,10 +22,10 @@ class Time_Ago {
     } else {
       $post_id = $post->ID;
     }
-    // subtract the post date from the current time
-    $date_string = human_time_diff( strtotime($the_date) ) . ' ago';
+    // subtract the current post date from the current time
+    $date_string = human_time_diff( get_the_time( 'U', $post_id ) , current_time('timestamp') ) . ' ago';
     // make the string prettier
-    $datestring = str_replace('min', 'minute', $date_string);
+    $date_string = str_replace('min', 'minute', $date_string);
 
     return $date_string;
   } // end of time_ago_date_format
