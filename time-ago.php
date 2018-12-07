@@ -26,6 +26,8 @@ along with Time Ago. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
 */
 if ( !defined('ABSPATH') ) exit;
 
+define( 'TIME_AGO_VERSION', '1.0.0' );
+
 require_once plugin_dir_path(__FILE__) . 'admin/time-ago-settings.php';
 require_once plugin_dir_path(__FILE__) . 'includes/time-ago-class.php';
 
