@@ -56,7 +56,7 @@ class Time_Ago {
         break;
 
       default:
-        return 'oops! switch went to default';
+        $date_string = $the_date;
         break;
     }
 
@@ -77,14 +77,17 @@ class Time_Ago {
   }
 
   public function time_ago_no_hours_format( $datestring ) {
-    if ( strpos( $datestring, 'hour' ) !== false || strpos( $datestring, 'min' ) !== false) {
+    if ( strpos( $datestring, 'hour' ) !== false ||
+         strpos( $datestring, 'min' ) !== false) {
       $datestring = "today";
     }
     return $datestring;
   }
 
   public function time_ago_no_days_format( $datestring ) {
-    if ( strpos( $datestring, 'hour' ) !== false || strpos( $datestring, 'min' ) !== false || strpos( $datestring, 'day' ) !== false) {
+    if ( strpos( $datestring, 'hour' ) !== false ||
+         strpos( $datestring, 'min' ) !== false ||
+         strpos( $datestring, 'day' ) !== false) {
       $datestring = "this week";
     }
     return $datestring;
@@ -98,7 +101,11 @@ class Time_Ago {
   }
 
   public function time_ago_no_months_format( $datestring ) {
-    if ( strpos( $datestring, 'hour' ) !== false || strpos( $datestring, 'min' ) !== false || strpos( $datestring, 'day' ) !== false || strpos( $datestring, 'week' ) !== false || strpos( $datestring, 'month' ) !== false ) {
+    if ( strpos( $datestring, 'hour' ) !== false ||
+         strpos( $datestring, 'min' ) !== false ||
+         strpos( $datestring, 'day' ) !== false ||
+         strpos( $datestring, 'week' ) !== false ||
+         strpos( $datestring, 'month' ) !== false ) {
       $datestring = "this year";
     }
     return $datestring;
