@@ -1,12 +1,12 @@
-=== Time Ago Units ===
-Contributors: (this should be a list of wordpress.org userid's)
+=== Time Ago Units===
+Contributors: jacklowrie
 Donate link: https://4thwall.io/downloads/time-ago-units/
-Tags: date, modify date, modify date units, time, modify time, modify time units, published, modify published, time ago, ago, ago units
+Tags: date, modify date, modify date units, time, modify time, modify time units, published, modify published, time ago, ago, time ago units
 Requires at least: 3.0.1
 Tested up to: 4.9
-Requires PHP: 5.2.4
+Requires PHP: 5.6
 Stable tag:
-License: GPLv2 or later
+License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Time Ago Units modifies the post date to show visitors the amount of time that has passed since the post is published.
