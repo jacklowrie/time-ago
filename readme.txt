@@ -1,19 +1,19 @@
-=== Time Ago ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: http://example.com/
-Tags: date, modify date, time, modify time, published, modify published, time ago, ago
+=== Time Ago Units===
+Contributors: jacklowrie
+Donate link: https://4thwall.io/downloads/time-ago-units/
+Tags: date, modify date, modify date units, time, modify time, modify time units, published, modify published, time ago, ago, time ago units
 Requires at least: 3.0.1
 Tested up to: 4.9
-Requires PHP: 5.2.4
+Requires PHP: 5.6
 Stable tag:
-License: GPLv2 or later
+License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Time Ago modifies the post date to show visitors the amount of time that has passed since the post is published.
+Time Ago Units modifies the post date to show visitors the amount of time that has passed since the post is published.
 
 == Description ==
 
-Time Ago is a lightweight plugin that modifies the date format on posts from the
+Time Ago Units is a lightweight plugin that modifies the date format on posts from the
 date the post is published to the amount of time that has passed since the post
 was published. Dates will now appear as "1 minute ago," "2 weeks ago," etc.
 
@@ -23,9 +23,11 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `&amp;lt;?php do_action('plugin_name_hook'); ?&amp;gt;` in your templates
+1. Upload `time-ago-units` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress. That's it! You
+can modify the settings if you want to change the units of time displayed from
+the settings submenu for the plugin.
+
 
 
 == Changelog ==
