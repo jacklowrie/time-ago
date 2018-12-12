@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name:  Time Ago Units
-Plugin URI:   https://4thwall.io
+Plugin URI:   https://4thwall.io/downloads/time-ago-units/
 Description:  Simple WordPress Plugin changes the date format on posts and pages.
 Version:      1.0
 Author:       4th Wall Websites
