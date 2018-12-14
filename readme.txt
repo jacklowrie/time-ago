@@ -1,6 +1,5 @@
 === Time Ago Units===
 Contributors: jacklowrie
-Donate link: https://4thwall.io/downloads/time-ago-units/
 Tags: date, modify date, modify date units, time, modify time, modify time units, published, modify published, time ago, ago, time ago units
 Requires at least: 3.0.1
 Tested up to: 4.9
